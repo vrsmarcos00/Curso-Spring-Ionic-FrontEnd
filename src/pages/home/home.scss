@@ -23,8 +23,12 @@ page-home {
       }
 
       ion-input{
+        padding-left: 10px;
         border: 3px solid black;
         border-radius: 8px;
+        ::placeholder {
+          font-size: 15px;
+        }
       }
 
       .password {
