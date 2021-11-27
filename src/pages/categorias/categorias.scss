@@ -1,3 +1,11 @@
 page-categorias {
-
+  ion-list{
+    img {
+      border-radius: 50%;
+    }
+    h2 {
+      text-align: start;
+      padding-left: 15px;
+    }
+  }
 }
