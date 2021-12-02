@@ -1,3 +1,22 @@
 page-produtos {
+  .items {
+    background-color: rgb(59, 139, 230);
+    margin-bottom: 5px;
+    border-radius: 10px;
 
+    img {
+      border-radius: 50%;
+    }
+    h2 {
+      color: black;
+      text-align: start;
+      padding-left: 15px;
+      font-weight: bold;
+    }
+    h3{
+      color: black;
+      padding-left: 15px;
+      font-weight: bold;
+    }
+  }
 }
