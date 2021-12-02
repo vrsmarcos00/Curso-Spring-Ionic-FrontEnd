@@ -1,3 +1,62 @@
 page-cart {
 
+  .items {
+    background-color: #eeeeee;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
+    .icones{
+      display: flex;
+    }
+
+    .box {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .remove {
+      color: red;
+    }
+
+    .add {
+      color: blue;
+    }
+
+    .icones{
+      display: flex;
+    }
+
+    .box {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .remove {
+      color: red;
+    }
+
+    .add {
+      color: blue;
+    }
+  }
+
+  .trash {
+    color: red;
+    font-size: 25px;
+  }
+  .total {
+    background-color: rgb(53, 52, 52);
+    margin-top: 20px;
+    border-radius: 10px;
+
+    h1{
+      color: aliceblue;
+      padding: 5px;
+    }
+  }
+
+  .vazio {
+    text-align: center;
+  }
+
 }
