@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Confirmação</ion-title>
+    <ion-title>Confira seu pedido</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -66,5 +66,9 @@
       <h3>Boleto Bancário</h3>
     </ion-item>
   </ion-card>
+
+  <button ion-button block color="secondary" (click)="checkout()">Confirmar Pedido</button>
+
+  <button ion-button block (click)="backPage()">Voltar</button>
 
 </ion-content>
