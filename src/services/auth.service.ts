@@ -9,23 +9,19 @@ import { StorageService } from "./storage.service";
 
 @Injectable()
 export class AuthService {
-
   jwtHelper: JwtHelper = new JwtHelper();
 
   constructor(
-    public http : HttpClient,
-    public storage : StorageService,
-    public cartService: CartService) {
-  }
+    public http: HttpClient,
+    public storage: StorageService,
+    public cartService: CartService
+  ) {}
 
-  authenticate(creds : CredenciaisDTO) {
-    return this.http.post(
-      `${API_CONFIG.baseUrl}/login`,
-      creds,
-      {
-        observe: 'response',
-        responseType: 'text'
-      });
+  authenticate(creds: CredenciaisDTO) {
+    return this.http.post(`${API_CONFIG.baseUrl}/login`, creds, {
+      observe: "response",
+      responseType: "text",
+    });
   }
 
   refreshToken() {
@@ -33,16 +29,17 @@ export class AuthService {
       `${API_CONFIG.baseUrl}/auth/refresh_token`,
       {},
       {
-        observe: 'response',
-        responseType: 'text'
-      });
+        observe: "response",
+        responseType: "text",
+      }
+    );
   }
 
-  successfullLogin(authorizationValue : string) {
+  successfullLogin(authorizationValue: string) {
     let tok = authorizationValue.substring(7);
-    let user : LocalUser = {
+    let user: LocalUser = {
       token: tok,
-      email: this.jwtHelper.decodeToken(tok).sub
+      email: this.jwtHelper.decodeToken(tok).sub,
     };
     this.storage.setLocalUser(user);
     this.cartService.createOrClearCart();
@@ -51,5 +48,4 @@ export class AuthService {
   logout() {
     this.storage.setLocalUser(null);
   }
-
 }
