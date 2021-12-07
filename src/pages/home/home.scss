@@ -6,13 +6,12 @@ page-home {
     margin-bottom: 20px;
   }
 
-  img{
-    width: 150px;
-    height: 150px;
-    align-self: center;
-    margin: auto;
+  .image{
+    font-size: 150px;
+    text-align: center;
     display: block;
-    padding: 10px;
+    margin: 30px 0 30px 0;
+    color: rgb(6, 34, 78);
   }
 
   form {
